@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renaissance Roleplay</title>
+<meta name="description" content="Renaissance Roleplay, serveur FiveM francophone. Los Santos, coupée en deux par un mur depuis que la terre s'est ouverte au-dessus du cratère de 1945.">
+<meta property="og:title" content="Renaissance Roleplay">
+<meta property="og:description" content="Plus qu'un jeu, une seconde vie. Serveur FiveM francophone.">
+<meta property="og:image" content="images/chiliad-nuit.webp">
+<meta name="theme-color" content="#09080c">
+<link rel="icon" href="images/logo-petit.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#haut" aria-label="Renaissance, retour en haut"><img src="images/logo-petit.webp" alt="Renaissance" width="400" height="267"></a>
+  <nav class="nav-liens" aria-label="Sections">
+    <a href="#univers">Univers</a>
+    <a href="#mur">Le Mur</a>
+    <a href="#avenirs">Avenirs</a>
+    <a href="#serveur">Serveur</a>
+    <a href="#rejoindre">Rejoindre</a>
+  </nav>
+  <button class="nav-son" id="son" type="button" aria-pressed="false" title="Ambiance sonore : pluie et orage">
+    <span class="barres" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="nav-son-texte">Son</span>
+  </button>
+  <a class="bouton bouton-contour bouton-petit" data-lien="discord" href="#">Discord</a>
+</header>
+
+<main id="haut">
+
+  <!-- Héros : capture en jeu du Chiliad, pluie, brume, orage -->
+  <section class="heros" aria-label="Accueil">
+    <div class="heros-image"></div>
+    <div class="heros-image heros-eclairee" id="eclairee" aria-hidden="true"></div>
+    <div class="lueur-ciel" id="lueur" aria-hidden="true"></div>
+    <canvas class="couche eclair" id="eclair" aria-hidden="true"></canvas>
+    <div class="brume brume-1" aria-hidden="true"></div>
+    <div class="brume brume-2" aria-hidden="true"></div>
+    <canvas class="couche pluie-loin" id="pluie-loin" aria-hidden="true"></canvas>
+    <canvas class="couche pluie-pres" id="pluie-pres" aria-hidden="true"></canvas>
+    <div class="heros-voile" aria-hidden="true"></div>
+
+    <div class="heros-contenu">
+      <p class="etiquette">Serveur FiveM · francophone</p>
+      <h1 class="visuellement-cache">Renaissance Roleplay — L'Ordre des Arcanes</h1>
+      <img class="heros-logo" src="images/logo.webp" alt="Renaissance — L'Ordre des Arcanes" width="1536" height="1024">
+      <p class="heros-accroche">Plus qu'un jeu, une seconde vie.</p>
+      <p class="heros-texte">Los Santos, aujourd'hui. Depuis que la terre s'est ouverte au-dessus du cratère de 1945, un mur coupe la ville en deux. Au sud, la vie continue. Au nord, la pierre brille encore.</p>
+      <div class="actions">
+        <a class="bouton bouton-plein" data-lien="discord" href="#">Rejoindre le Discord</a>
+        <a class="bouton bouton-contour" href="#univers">Découvrir l'univers</a>
+      </div>
+    </div>
+
+    <dl class="chiffres">
+      <div><dt>1945</dt><dd>La pierre tombe sur Blaine County</dd></div>
+      <div><dt>14 h</dt><dd>Sans lumière après le séisme</dd></div>
+      <div><dt>1 mur</dt><dd>Entre le Sud et le Nord</dd></div>
+      <div><dt>3 avenirs</dt><dd>Décidés par les joueurs</dd></div>
+    </dl>
+    <p class="legende-capture">Mont Chiliad · capture en jeu</p>
+  </section>
+
+  <!-- 01 L'univers -->
+  <section class="section" id="univers">
+    <div class="deux-colonnes">
+      <div class="revele">
+        <p class="numero">01 — L'univers</p>
+        <h2>Une pierre tombée du ciel. Une ville qui ne dit pas tout.</h2>
+        <p class="texte">Le 2 septembre 1945, à 23 h 12, un objet céleste s'écrase dans les montagnes de Blaine County. Au fond du cratère, des cristaux d'un violet éblouissant. L'armée boucle le site avant l'arrivée des secours.</p>
+        <p class="texte">Depuis, le comté vit avec ce secret. Certains l'ont étudié, d'autres en ont profité. Quelques-uns, sans le vouloir, en portent aujourd'hui la marque.</p>
+      </div>
+      <figure class="photo revele">
+        <img src="images/chiliad-couchant.webp" alt="Cristaux violets géants au sommet du mont Chiliad, au coucher du soleil" loading="lazy" width="2000" height="1151">
+        <figcaption>Le sommet du Chiliad · capture en jeu</figcaption>
+      </figure>
+    </div>
+
+    <ol class="chrono">
+      <li class="revele">
+        <span class="chrono-annee">1945</span>
+        <h3>Projet Renaissance</h3>
+        <p>L'impact est classé secret militaire. Le site reçoit un nom de code : <span class="caviarde" title="Déclassifié">Projet Renaissance</span>.</p>
+      </li>
+      <li class="revele">
+        <span class="chrono-annee">1968</span>
+        <h3>Le Bunker 68</h3>
+        <p>Sous la montagne, un complexe souterrain étudie la pierre. Des enfants sans famille servent de cobayes ; ceux qui ne survivent pas disparaissent des registres.</p>
+      </li>
+      <li class="revele">
+        <span class="chrono-annee">1995</span>
+        <h3>Le Directoire</h3>
+        <p>L'élite de la ville tire de la pierre le Sérum V-45. Le Directoire 1945, mené par Stan Cooper, ne vieillit plus. Ses autres membres : <span class="caviarde" title="Inconnus">noms inconnus</span>.</p>
+      </li>
+      <li class="revele">
+        <span class="chrono-annee">2021</span>
+        <h3>La fracture</h3>
+        <p>Un séisme de magnitude 6,8 rouvre la faille. Quatorze heures de noir total. Quelques semaines plus tard, le béton commence à couler.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 02 Le Mur -->
+  <section class="section" id="mur">
+    <div class="entete revele">
+      <p class="numero">02 — Le Mur</p>
+      <h2>Deux villes. Une seule version officielle.</h2>
+      <p class="texte">« Quarantaine biologique de niveau 4. » C'est tout ce que les autorités ont dit en 2022, en coupant le comté en deux.</p>
+    </div>
+    <div class="cotes">
+      <article class="cote cote-sud revele">
+        <p class="cote-lieu">Au sud du Mur</p>
+        <h3>Le Sud</h3>
+        <p>Néons, commerces, voitures de luxe : l'illusion du rêve américain. La police y traque en silence les comportements « anormaux », et la nuit, la radio capte des fréquences que personne n'explique.</p>
+        <p class="cote-statut"><span class="point vert"></span>C'est ici que vous jouez</p>
+      </article>
+      <article class="cote cote-nord revele">
+        <img src="images/chiliad-jour.webp" alt="Cristaux violets sur les pentes du Chiliad, en plein jour" loading="lazy" width="2000" height="1151">
+        <div class="cote-contenu">
+          <p class="cote-lieu">Au nord du Mur</p>
+          <h3>Le Nord</h3>
+          <p>Pas de police, pas de loi. Des ruines, des portraits de disparus et, au sommet du Chiliad, la pierre qui continue de pousser.</p>
+          <p class="cote-statut"><span class="point rouge"></span>Zone interdite</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 03 Les Éveillés et les trois avenirs -->
+  <section class="section" id="avenirs">
+    <div class="entete revele">
+      <p class="numero">03 — Les Éveillés</p>
+      <h2>Ce que la pierre a réveillé.</h2>
+      <p class="texte">Chez certains, l'exposition a réveillé des capacités hors du commun. Un don pour les uns, une menace pour le Directoire. Les pouvoirs sont rares : un seul de vos personnages peut en porter un.</p>
+    </div>
+    <p class="sous-titre revele">La première saison se termine sur un choix. Ce sont les joueurs qui le feront.</p>
+    <div class="voies">
+      <article class="voie voie-bleue revele">
+        <p class="voie-num">Voie 01</p>
+        <h3>Les Révélateurs</h3>
+        <p>Tout révéler. Le Mur tombe, le gouvernement aussi. La saison suivante s'ouvre sur une guerre civile.</p>
+      </article>
+      <article class="voie voie-rouge revele">
+        <p class="voie-num">Voie 02</p>
+        <h3>Les Maîtres de l'ombre</h3>
+        <p>Tout contrôler. Le chantage sur le Directoire donne les territoires et le marché noir.</p>
+      </article>
+      <article class="voie voie-violette revele">
+        <p class="voie-num">Voie 03</p>
+        <h3>Les Éveillés</h3>
+        <p>Tout éveiller. Les artefacts libèrent l'anomalie, avec les responsabilités qui vont avec.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 04 Le serveur -->
+  <section class="section" id="serveur">
+    <div class="entete revele">
+      <p class="numero">04 — Le serveur</p>
+      <h2>Une ville complète, pensée pour le roleplay.</h2>
+    </div>
+    <div class="atouts">
+      <article class="atout revele">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.5 2.5M15.2 15.2l2.5 2.5M6.3 17.7l2.5-2.5M15.2 8.8l2.5-2.5"/></svg>
+        <h3>Les pouvoirs</h3>
+        <p>Le feu des Éveillés, en trois niveaux. Un pouvoir par joueur, rare et convoité.</p>
+      </article>
+      <article class="atout revele">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></svg>
+        <h3>Les métiers</h3>
+        <p>Police, ambulanciers, mécaniciens du Benny's et de LS Tuners, concessionnaires, entreprises tenues par les joueurs.</p>
+      </article>
+      <article class="atout revele">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>
+        <h3>La vie civile</h3>
+        <p>Téléphone et tablette, garages, coffres, stations-service, boutiques.</p>
+      </article>
+      <article class="atout revele">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6"/></svg>
+        <h3>L'économie</h3>
+        <p>Banque, distributeurs, comptes d'entreprise et salaires des services publics.</p>
+      </article>
+      <article class="atout revele">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 15c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M2 19c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M12 10V3l4 3"/></svg>
+        <h3>Les activités</h3>
+        <p>Pêche, skateboard, lavage auto… et d'autres à venir.</p>
+      </article>
+      <article class="atout revele">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h4M14.5 13.5h3"/></svg>
+        <h3>Votre personnage</h3>
+        <p>Création complète, vêtements, carte d'identité et permis dans un vrai portefeuille.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 05 Rejoindre -->
+  <section class="section" id="rejoindre">
+    <div class="rejoindre revele">
+      <div>
+        <p class="numero">05 — Rejoindre</p>
+        <h2>Votre histoire commence au sud du Mur.</h2>
+        <ol class="etapes">
+          <li><span>1</span><div><h3>Rejoignez le Discord</h3><p>Annonces, nouveautés et accès au serveur.</p></div></li>
+          <li><span>2</span><div><h3>Installez FiveM</h3><p>Le lanceur gratuit pour GTA V, sur <a href="https://fivem.net" target="_blank" rel="noopener">fivem.net</a>.</p></div></li>
+          <li><span>3</span><div><h3>Connectez-vous</h3><p>Créez votre personnage et entrez dans la ville.</p></div></li>
+        </ol>
+      </div>
+      <div class="rejoindre-cta">
+        <a class="bouton bouton-plein bouton-grand" data-lien="discord" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 5.6A16.5 16.5 0 0 0 15.4 4.3l-.5 1a15 15 0 0 0-5.8 0l-.5-1a16.5 16.5 0 0 0-4.1 1.3C1.9 9.5 1.2 13.3 1.5 17a16.6 16.6 0 0 0 5 2.6l1.1-1.7a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.8 11.8 0 0 0 11.4 0l.4.3a10.7 10.7 0 0 1-1.7.8l1.1 1.7a16.6 16.6 0 0 0 5-2.6c.4-4.3-.7-8.1-3-11.4zM8.7 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.9 2.2-1.9 2.2zm6.6 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>
+          Rejoindre le Discord
+        </a>
+        <p class="cta-note" data-detail="discord">discord.gg</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="pied-haut">
+    <img src="images/logo-petit.webp" alt="Renaissance" width="400" height="267">
+    <nav aria-label="Liens du pied de page">
+      <a href="#univers">Univers</a>
+      <a href="#mur">Le Mur</a>
+      <a href="#avenirs">Avenirs</a>
+      <a href="#serveur">Serveur</a>
+      <a data-lien="discord" href="#">Discord</a>
+      <a data-lien="bd" href="#">Le prologue illustré</a>
+    </nav>
+  </div>
+  <p class="pied-bas">© 2026 Renaissance Roleplay · Serveur FiveM non affilié à Rockstar Games ni à Take-Two Interactive.</p>
+</footer>
+
+<div class="grain" aria-hidden="true"></div>
+<script src="app.js"></script>
+</body>
+</html>
